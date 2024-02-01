@@ -1,0 +1,43 @@
+{
+  "name": "create-release",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && ncc build lib/index.js && rm -rf lib",
+    "test": "jest --coverage --coverageDirectory='coverage'",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaiWedekind/create-release"
+  },
+  "keywords": [
+    "actions",
+    "node"
+  ],
+  "author": "Kai Wedekind",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-jest": "^27.6.3",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.1",
+    "prettier": "^3.2.4",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
